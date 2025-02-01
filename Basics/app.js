@@ -1,3 +1,5 @@
+// box animation here 
+
 gsap.to("#box1", {
   x: 1200,
   duration: 2,
@@ -24,4 +26,22 @@ gsap.to("#box3",{
     backgroundColor:"blue",
     // borderRadius:50,
     borderRadius:"50%",
+})
+
+
+// text animation here
+
+// gsap.to("h1",{
+//     opacity:0,
+//     duration:2,
+//     delay:1
+// })
+gsap.from("h1",{
+    opacity:0,
+    duration:2,
+    delay:1,
+    y:30,
+    // color:"blue"
+    stagger:1
+    // stagger:-1
 })
