@@ -50,6 +50,18 @@ gsap.fromTo(
 
 ---
 
+## 📌 What is .to() and How Does It Work?
+
+The **.to()** method in GSAP animates an element to a specified state from its current state.
+
+```javascript
+gsap.to(".box", { x: 300, opacity: 1, duration: 2 });
+
+```
+**Explanation:** The element moves to x: 300 and opacity: 1 over a duration of 2 seconds.
+
+---
+
 ## 📌 What is .from() and How Does It Work?
 
 The **.from()** method in GSAP animates an element from a specific state to its natural/default state.
