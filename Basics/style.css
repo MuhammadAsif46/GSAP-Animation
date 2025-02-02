@@ -31,3 +31,9 @@ body{
     height: 200px;
     background-color: green;
 }
+
+#box{
+    width: 250px;
+    height: 250px;
+    background-color: crimson;
+}

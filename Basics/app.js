@@ -45,3 +45,16 @@ gsap.from("h1",{
     stagger:1
     // stagger:-1
 })
+
+
+// repeated animation
+
+gsap.to("#box",{
+    x:1200,
+    duration:2,
+    delay:1,
+    rotate:360,
+   // repeat:1, // run 2 times 1 time default
+    repeat:-1,  // -1 value run infinite   
+    yoyo:true   // yoyo to from 2 sides
+})
