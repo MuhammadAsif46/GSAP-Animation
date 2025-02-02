@@ -115,3 +115,33 @@ gsap.to(".box", {
   duration: 2
 });
 ```
+
+---
+
+### 📌 Pinning in ScrollTrigger
+
+Pinning locks an element in place while scrolling.
+```javascript
+gsap.to(".section", {
+  scrollTrigger: {
+    trigger: ".section",
+    pin: true,
+    start: "top top",
+    end: "bottom 100px",
+    scrub: true
+  }
+});
+```
+
+### 📌 Some Other Plugins
+
+- **GSAP MotionPathPlugin** (For animating along a path)
+- **GSAP Flip Plugin** (For smooth state transitions)
+- **GSAP TextPlugin** (For text animations)
+- **GSAP Draggable** (For making elements draggable)
+
+### 📌 Project with GSAP
+
+Building interactive animations using GSAP to enhance user experience.
+Stay tuned for a complete project example in the advanced guide! 🚀
+
