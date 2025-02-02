@@ -71,3 +71,150 @@ gsap.from(".box", { x: -300, opacity: 0, duration: 1.5 });
 
 ```
 **Explanation:** The element starts from x: -300 and opacity: 0, and then smoothly transitions to its original position and full opacity.
+
+---
+
+## 📌 Basic GSAP Animation
+
+### `gsap.to()`
+Animates an element from its current state to the specified values.
+
+```js
+ gsap.to("#box1", {
+   x: 1200,
+   duration: 2,
+   delay: 1,
+ });
+```
+- `x: 1200` → Moves the element 1200 pixels along the x-axis.
+- `duration: 2` → The animation will complete in 2 seconds.
+- `delay: 1` → Starts the animation after a 1-second delay.
+
+### `gsap.from()`
+Animates an element from the specified values to its natural/default state.
+
+```js
+ gsap.from("#box2", {
+   x: 1200,
+   duration: 2,
+   delay: 1,
+ });
+```
+- The element starts at `x: 1200` and moves back to its default position.
+
+### Transform Properties
+
+```js
+ gsap.to("#box3",{
+     x:1200,
+     duration:2,
+     delay:1,
+     rotate: 360,
+     backgroundColor:"blue",
+     borderRadius:"50%",
+ })
+```
+- `rotate: 360` → Rotates the element 360 degrees.
+- `backgroundColor: "blue"` → Changes the background color to blue.
+- `borderRadius: "50%"` → Makes the element circular.
+
+## 📌 Text Animation
+
+### Opacity Animation
+
+```js
+ gsap.to("h1",{
+     opacity:0,
+     duration:2,
+     delay:1
+ })
+```
+- `opacity: 0` → Fades out the text.
+
+```js
+ gsap.from("h1",{
+     opacity:0,
+     duration:2,
+     delay:1,
+     y:30,
+     stagger:1
+ })
+```
+- `y: 30` → Moves the text 30 pixels down before transitioning to its normal position.
+- `stagger: 1` → Delays each letter's animation by 1 second.
+
+## 📌 Repeated Animation
+
+```js
+ gsap.to("#box",{
+     x:1200,
+     duration:2,
+     delay:1,
+     rotate:360,
+     repeat:-1,
+     yoyo:true   
+ })
+```
+- `repeat: -1` → Runs the animation infinitely.
+- `yoyo: true` → Moves the element back and forth, creating a ping-pong effect.
+
+## 📌 Timeline Animation
+
+### Without Timeline
+
+```js
+ gsap.to("#box1", { x: 1200, duration: 1.5, delay: 1 });
+ gsap.to("#box2", { x: 1200, duration: 1.5, delay: 2.5, backgroundColor:"yellow" });
+ gsap.to("#box3", { x: 1200, duration: 1.5, delay: 4, scale:0.5, borderRadius: "50%" });
+```
+- Each animation starts after calculating the delay manually.
+
+### Using Timeline
+
+```js
+ var tl = gsap.timeline();
+
+ tl.to("#box1", { x: 1200, duration: 1.5, delay: 1 });
+ tl.to("#box2", { x: 1200, duration: 1.5, backgroundColor:"yellow" });
+ tl.to("#box3", { x: 1200, duration: 1.5 });
+```
+- Timeline queues animations one after another without manually setting delays.
+
+## 📌 Navbar Animation
+
+```js
+ var tl = gsap.timeline();
+
+ tl.from("h1",{
+   y:-20,
+   opacity: 0,
+   duration: 1,
+   delay:0.5
+ })
+```
+- `y: -20` → Moves the text 20 pixels upwards before transitioning to its default position.
+- `opacity: 0` → Starts fully transparent and fades in.
+
+```js
+ tl.from("h3",{
+   y:-20,
+   opacity: 0,
+   duration: 1,
+   stagger:0.3
+ })
+```
+- `stagger: 0.3` → Animates multiple `h3` elements with a 0.3-second gap between each.
+
+```js
+ tl.from("#heading",{
+   y:20,
+   opacity: 0,
+   duration: 1,
+   scale:0.2,
+ })
+```
+- `scale: 0.2` → Starts the heading at 20% of its size and expands to full size.
+
+## 📌 Conclusion
+This README provides an explanation of various GSAP properties used in the animation examples. GSAP is a powerful library for creating smooth and complex animations efficiently.
+

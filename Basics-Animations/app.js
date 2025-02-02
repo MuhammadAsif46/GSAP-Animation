@@ -101,7 +101,7 @@
 //   duration: 1.5,
 // });
 
-// navbar animation
+// navbar animation practice
 
 var tl = gsap.timeline();
 
