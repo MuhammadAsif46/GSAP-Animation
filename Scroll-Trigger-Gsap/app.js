@@ -22,27 +22,42 @@
 
 // scrollTrigger use text
 
-gsap.from("#page2 h1",{
-    opacity:0,
-    duration:2,
-    x:500,
-    scrollTrigger:{
-        trigger: "#page2 h1",
-        scroller:"body",
+// gsap.from("#page2 h1",{
+//     opacity:0,
+//     duration:2,
+//     x:500,
+//     scrollTrigger:{
+//         trigger: "#page2 h1",
+//         scroller:"body",
+//         markers:true,
+//         start: "top 50%",
+//         scrub: true
+//     }
+// })
+// gsap.from("#page2 h2",{
+//     opacity:0,
+//     duration:2,
+//     x:-500,
+//     scrollTrigger:{
+//         trigger: "#page2 h2",
+//         scroller:"body",
+//         markers:true,
+//         start: "top 50%",
+//         scrub: true
+//     }
+// })
+
+// pin property new animation:
+
+gsap.to("#item2 h1", {
+    transform: "translateX(-190%)",
+    scrollTrigger: {
+        trigger: "#item2",
+        scroller: "body",
         markers:true,
-        start: "top 50%",
-        scrub: true
-    }
-})
-gsap.from("#page2 h2",{
-    opacity:0,
-    duration:2,
-    x:-500,
-    scrollTrigger:{
-        trigger: "#page2 h2",
-        scroller:"body",
-        markers:true,
-        start: "top 50%",
-        scrub: true
+        start: "top 0%",
+        end: "top -150%",
+        scrub:2,
+        pin:true
     }
 })
